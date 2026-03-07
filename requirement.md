@@ -94,7 +94,6 @@ Prepared by: MSc. Nguyen Trung Nghia Lab 1 – Page 7
 Allowed: idea generation, grammar/style help, CSS/HTML snippets.
 Not allowed: copying full template without understanding.
 Required: submit AI usage log (tool used, prompts, how you modified).
-Prepared by: MSc. Nguyen Trung Nghia Lab 1 – Page 8
 11) Bonus (Optional)
 • Dark/light mode.
 • Print-friendly CSS.
