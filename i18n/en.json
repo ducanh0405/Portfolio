@@ -1,0 +1,97 @@
+{
+  "lang": {
+    "code": "en",
+    "name": "English"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "common": {
+    "quickLinks": "Quick Links",
+    "privacyPolicy": "Privacy Policy",
+    "allRightsReserved": "All rights reserved.",
+    "language": "Language"
+  },
+  "home": {
+    "heroTitle": "Welcome to my website",
+    "heroSubtitle": "I'm a Data Science Student from HCMIU",
+    "heroQuestion": "Want to know more about me?",
+    "aboutCta": "About me",
+    "contactCta": "Contact me",
+    "introTitle": "Welcome",
+    "introLine1": "I'm a sophomore from HCMIU, Vietnam",
+    "introLine2": "I'm interested in AI, Machine Learning and Game Development",
+    "portfolioTitle": "Portfolio",
+    "portfolioSubtitle": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    "caseStudy": "Case Study →",
+    "moreProject": "More Project",
+    "quickLinksTitle": "Quick Links",
+    "quickAbout": "About Me",
+    "quickProjects": "My Projects",
+    "quickBlog": "Blog",
+    "quickContact": "Get in Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "backgroundTitle": "Background",
+    "backgroundText": "I'm a sophomore Data Science student at HCMIU (Ho Chi Minh City International University), Vietnam. I'm passionate about turning data into insights and building intelligent systems.",
+    "interestsTitle": "Interests",
+    "interestAiTitle": "AI & Machine Learning",
+    "interestAiText": "Building and training models for real-world applications",
+    "interestGameTitle": "Game Development",
+    "interestGameText": "Creating interactive experiences and learning game engines",
+    "interestVizTitle": "Data Visualization",
+    "interestVizText": "Presenting data in clear, meaningful ways"
+  },
+  "projects": {
+    "title": "Portfolio",
+    "subtitle": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    "backToHome": "Back to Home"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts on AI, Machine Learning, and development.",
+    "readMore": "Read more",
+    "postedOn": "Posted on {{date}}"
+  },
+  "post1": {
+    "title": "Getting Started with Machine Learning",
+    "introTitle": "Introduction",
+    "conceptsTitle": "Key Concepts",
+    "toolsTitle": "Tools to Get Started",
+    "backToBlog": "← Back to Blog"
+  },
+  "contact": {
+    "title": "Let's discuss your Project",
+    "intro": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    "addressLabel": "Address",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "nameLabel": "Name",
+    "locationLabel": "Location",
+    "budgetLabel": "Budget",
+    "subjectLabel": "Subject",
+    "messageLabel": "Message",
+    "submit": "Submit",
+    "subjectProjectInquiry": "Project Inquiry",
+    "subjectCollaboration": "Collaboration",
+    "subjectHiring": "Hiring"
+  },
+  "policy": {
+    "title": "Privacy Policy & Terms",
+    "lastUpdated": "Last updated: {{date}}",
+    "termsTitle": "Terms of Use",
+    "termsIntro": "By using this website, you agree to the following terms:",
+    "terms1": "Content on this site is for personal and educational purposes",
+    "terms2": "You may not copy or redistribute content without permission",
+    "terms3": "I reserve the right to update these terms at any time",
+    "contactTitle": "Contact",
+    "contactTextPrefix": "For questions about this policy, please",
+    "contactLink": "contact me",
+    "contactTextSuffix": "."
+  }
+}

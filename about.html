@@ -10,43 +10,53 @@
 <body>
     <header>
         <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <ul id="nav-container"></ul>
+            <div class="lang-switch">
+                <select id="lang-select" data-i18n-aria-label="common.language">
+                    <option value="en">EN</option>
+                    <option value="vi">VI</option>
+                </select>
+            </div>
+            <noscript>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </noscript>
         </nav>
     </header>
     <main>
         <section class="page-header" aria-labelledby="about-heading">
-            <h1 id="about-heading">About Me</h1>
+            <h1 id="about-heading" data-i18n="about.title">About Me</h1>
         </section>
         <section class="content-section" aria-labelledby="background-heading">
-            <h2 id="background-heading">Background</h2>
-            <p>I'm a sophomore Data Science student at HCMIU (Ho Chi Minh City International University), Vietnam. I'm passionate about turning data into insights and building intelligent systems.</p>
+            <h2 id="background-heading" data-i18n="about.backgroundTitle">Background</h2>
+            <p data-i18n="about.backgroundText">I'm a sophomore Data Science student at HCMIU (Ho Chi Minh City International University), Vietnam. I'm passionate about turning data into insights and building intelligent systems.</p>
         </section>
         <section class="content-section" aria-labelledby="interests-heading">
-            <h2 id="interests-heading">Interests</h2>
+            <h2 id="interests-heading" data-i18n="about.interestsTitle">Interests</h2>
             <ul>
-                <li><strong>AI & Machine Learning</strong> – Building and training models for real-world applications</li>
-                <li><strong>Game Development</strong> – Creating interactive experiences and learning game engines</li>
-                <li><strong>Data Visualization</strong> – Presenting data in clear, meaningful ways</li>
+                <li><strong data-i18n="about.interestAiTitle">AI & Machine Learning</strong> – <span data-i18n="about.interestAiText">Building and training models for real-world applications</span></li>
+                <li><strong data-i18n="about.interestGameTitle">Game Development</strong> – <span data-i18n="about.interestGameText">Creating interactive experiences and learning game engines</span></li>
+                <li><strong data-i18n="about.interestVizTitle">Data Visualization</strong> – <span data-i18n="about.interestVizText">Presenting data in clear, meaningful ways</span></li>
             </ul>
         </section>
     </main>
     <footer>
-        <p class="footer-title">Quick Links</p>
+        <p class="footer-title" data-i18n="common.quickLinks">Quick Links</p>
         <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-i18n="nav.about">About</a>
+            <a href="projects.html" data-i18n="nav.projects">Projects</a>
+            <a href="blog.html" data-i18n="nav.blog">Blog</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
         </div>
         <hr class="footer-divider">
-        <p class="footer-copy">&copy; 2025 Duc Anh. All rights reserved. <a href="policy.html">Privacy Policy</a></p>
+        <p class="footer-copy">&copy; 2025 Duc Anh. <span data-i18n="common.allRightsReserved">All rights reserved.</span> <a href="policy.html" data-i18n="common.privacyPolicy">Privacy Policy</a></p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,97 @@
+{
+  "lang": {
+    "code": "vi",
+    "name": "Tiếng Việt"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "projects": "Dự án",
+    "blog": "Blog",
+    "contact": "Liên hệ"
+  },
+  "common": {
+    "quickLinks": "Liên kết nhanh",
+    "privacyPolicy": "Chính sách quyền riêng tư",
+    "allRightsReserved": "Mọi quyền được bảo lưu.",
+    "language": "Ngôn ngữ"
+  },
+  "home": {
+    "heroTitle": "Chào mừng đến với website của tôi",
+    "heroSubtitle": "Tôi là sinh viên Khoa học Dữ liệu tại HCMIU",
+    "heroQuestion": "Bạn muốn biết thêm về tôi?",
+    "aboutCta": "Về tôi",
+    "contactCta": "Liên hệ",
+    "introTitle": "Chào mừng",
+    "introLine1": "Tôi là sinh viên năm 2 tại HCMIU, Việt Nam",
+    "introLine2": "Tôi quan tâm đến AI, Machine Learning và Phát triển game",
+    "portfolioTitle": "Portfolio",
+    "portfolioSubtitle": "Có rất nhiều biến thể của Lorem Ipsum, nhưng đa số đã bị chỉnh sửa theo một cách nào đó.",
+    "caseStudy": "Xem chi tiết →",
+    "moreProject": "Xem thêm dự án",
+    "quickLinksTitle": "Liên kết nhanh",
+    "quickAbout": "Về tôi",
+    "quickProjects": "Dự án",
+    "quickBlog": "Blog",
+    "quickContact": "Liên hệ"
+  },
+  "about": {
+    "title": "Về tôi",
+    "backgroundTitle": "Thông tin",
+    "backgroundText": "Tôi là sinh viên năm 2 ngành Khoa học Dữ liệu tại HCMIU (Đại học Quốc tế – ĐHQG TP.HCM), Việt Nam. Tôi đam mê biến dữ liệu thành insight và xây dựng các hệ thống thông minh.",
+    "interestsTitle": "Sở thích",
+    "interestAiTitle": "AI & Machine Learning",
+    "interestAiText": "Xây dựng và huấn luyện mô hình cho các bài toán thực tế",
+    "interestGameTitle": "Phát triển game",
+    "interestGameText": "Tạo trải nghiệm tương tác và tìm hiểu các game engine",
+    "interestVizTitle": "Trực quan hóa dữ liệu",
+    "interestVizText": "Trình bày dữ liệu rõ ràng và có ý nghĩa"
+  },
+  "projects": {
+    "title": "Portfolio",
+    "subtitle": "Có rất nhiều biến thể của Lorem Ipsum, nhưng đa số đã bị chỉnh sửa theo một cách nào đó.",
+    "backToHome": "Quay về trang chủ"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Chia sẻ về AI, Machine Learning và phát triển phần mềm.",
+    "readMore": "Đọc thêm",
+    "postedOn": "Đăng ngày {{date}}"
+  },
+  "post1": {
+    "title": "Bắt đầu với Machine Learning",
+    "introTitle": "Giới thiệu",
+    "conceptsTitle": "Khái niệm chính",
+    "toolsTitle": "Công cụ để bắt đầu",
+    "backToBlog": "← Quay lại Blog"
+  },
+  "contact": {
+    "title": "Hãy trao đổi về dự án của bạn",
+    "intro": "Có rất nhiều biến thể của Lorem Ipsum, nhưng đa số đã bị chỉnh sửa theo một cách nào đó.",
+    "addressLabel": "Địa chỉ",
+    "emailLabel": "Email",
+    "phoneLabel": "Điện thoại",
+    "nameLabel": "Họ tên",
+    "locationLabel": "Khu vực",
+    "budgetLabel": "Ngân sách",
+    "subjectLabel": "Chủ đề",
+    "messageLabel": "Nội dung",
+    "submit": "Gửi",
+    "subjectProjectInquiry": "Tư vấn dự án",
+    "subjectCollaboration": "Hợp tác",
+    "subjectHiring": "Tuyển dụng"
+  },
+  "policy": {
+    "title": "Chính sách quyền riêng tư & Điều khoản",
+    "lastUpdated": "Cập nhật lần cuối: {{date}}",
+    "termsTitle": "Điều khoản sử dụng",
+    "termsIntro": "Khi sử dụng website này, bạn đồng ý với các điều khoản sau:",
+    "terms1": "Nội dung trên trang chỉ phục vụ mục đích cá nhân và giáo dục",
+    "terms2": "Bạn không được sao chép hoặc phân phối lại nội dung khi chưa được phép",
+    "terms3": "Tôi có quyền cập nhật các điều khoản này bất cứ lúc nào",
+    "contactTitle": "Liên hệ",
+    "contactTextPrefix": "Nếu bạn có câu hỏi về chính sách này, vui lòng",
+    "contactLink": "liên hệ với tôi",
+    "contactTextSuffix": "."
+  }
+}
