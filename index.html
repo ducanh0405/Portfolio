@@ -8,93 +8,337 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!--
+      HOME PAGE COMPONENTS (easy to edit later):
+      - Update your name/role in the Hero section
+      - Replace Skills/Experience/Education with your real info
+      - Swap Project cards + links to match your `projects.html`
+    -->
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Go to homepage">
+                <span class="brand-mark" aria-hidden="true">DA</span>
+                <span class="brand-text">Duc Anh</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+
+            <ul id="primary-nav" class="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
-
             </ul>
+
+            <div class="lang-switch">
+                <select id="lang-select" data-i18n-aria-label="common.language">
+                    <option value="en">EN</option>
+                    <option value="vi">VI</option>
+                </select>
+            </div>
         </nav>
     </header>
-    <main>
-        <!-- Hero , Intro , quick links -->
-         <section class="hero" aria-labelledby="Hero-heading">
-            <h1 id="Hero-heading">Welcome to my website</h1>
-            <p>I'm a Data Science Student from HCMIU </p>
 
-            <p> Want to know more about me? </p>
-            <a href="about.html" class="cta-button">About me</a>
-            <a href="contact.html" class="cta-button">Contact me</a>
-         </section>
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Portfolio • Data Science • AI/ML</p>
+                <h1 id="hero-heading">Hi, I’m <span class="hero-name">Duc Anh</span>.</h1>
+                <p class="hero-subtitle">Data Science student at HCMIU. I build ML experiments, data projects, and web apps.</p>
 
-         <section class="intro" aria-labelledby="intro-heading">
-            <h2 id="intro-heading">Welcome</h2>
-            <p>I'm a sophomore from HCMIU, Vietnam</p>
-            <p>I'm interested in AI , Machine Learning and Game Development</p>
-          </section>
+                <div class="hero-actions" role="group" aria-label="Primary actions">
+                    <a href="projects.html" class="cta-button">View Projects</a>
+                    <a href="contact.html" class="cta-button cta-secondary">Contact Me</a>
+                </div>
 
-          <section class="portfolio-preview" aria-labelledby="portfolio-preview-heading">
-            <h2 id="portfolio-preview-heading">Portfolio</h2>
-            <p class="portfolio-subtitle">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                <ul class="hero-highlights" aria-label="Quick highlights">
+                    <li><strong>Focus:</strong> AI, Machine Learning, Data</li>
+                    <li><strong>Open to:</strong> Internships / Collaboration</li>
+                    <li><strong>Location:</strong> Vietnam</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ABOUT (short preview) -->
+        <section class="about-preview" aria-labelledby="about-heading">
+            <header class="section-header">
+                <h2 id="about-heading">About</h2>
+                <p class="section-subtitle">A quick intro—full details on the About page.</p>
+            </header>
+
+            <div class="about-grid">
+                <article class="about-card">
+                    <h3>What I’m working on</h3>
+                    <p>Replace this text with your current focus (coursework, research, internship, personal projects).</p>
+                </article>
+                <article class="about-card">
+                    <h3>What I enjoy</h3>
+                    <p>AI/ML, game development, and building useful tools. Swap this with your real interests.</p>
+                </article>
+                <article class="about-card">
+                    <h3>Links</h3>
+                    <ul class="link-list">
+                        <li><a href="#" rel="noopener">GitHub (edit link)</a></li>
+                        <li><a href="#" rel="noopener">LinkedIn (edit link)</a></li>
+                        <li><a href="#" rel="noopener">Resume PDF (add file)</a></li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="section-actions">
+                <a href="about.html" class="more-projects-btn">More about me</a>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills" aria-labelledby="skills-heading">
+            <header class="section-header">
+                <h2 id="skills-heading">Skills</h2>
+                <p class="section-subtitle">Keep these as keywords recruiters can scan quickly.</p>
+            </header>
+
+            <div class="skills-grid">
+                <article class="skill-group">
+                    <h3>Core</h3>
+                    <ul class="chip-list">
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Statistics</li>
+                        <li>Data Visualization</li>
+                    </ul>
+                </article>
+                <article class="skill-group">
+                    <h3>ML / AI</h3>
+                    <ul class="chip-list">
+                        <li>Scikit-learn</li>
+                        <li>PyTorch</li>
+                        <li>Model Evaluation</li>
+                        <li>Feature Engineering</li>
+                    </ul>
+                </article>
+                <article class="skill-group">
+                    <h3>Web / Tools</h3>
+                    <ul class="chip-list">
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>Git/GitHub</li>
+                        <li>APIs</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="portfolio-preview" aria-labelledby="projects-heading">
+            <header class="section-header">
+                <h2 id="projects-heading">Featured Projects</h2>
+                <p class="portfolio-subtitle">Replace these cards with your best 2–4 projects. Keep each description 1–2 lines.</p>
+            </header>
+
             <div class="projects-grid portfolio-grid">
-              <article class="project-card portfolio-card">
-                <figure>
-                  <img src="https://picsum.photos/id/1/400/250" alt="Abstract data visualization" width="400" height="250">
-                </figure>
-                <span class="project-category">DATA SCIENCE</span>
-                <h2>Product Admin Dashboard</h2>
-                <p>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
-                <a href="projects.html" class="case-study-btn">Case Study &rarr;</a>
-              </article>
-              <article class="project-card portfolio-card">
-                <figure>
-                  <img src="https://picsum.photos/id/2/400/250" alt="ML project visualization" width="400" height="250">
-                </figure>
-                <span class="project-category">MACHINE LEARNING</span>
-                <h2>ML Classification Model</h2>
-                <p>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
-                <a href="projects.html" class="case-study-btn">Case Study &rarr;</a>
-              </article>
-              <article class="project-card portfolio-card">
-                <figure>
-                  <img src="https://picsum.photos/id/3/400/250" alt="Web development project" width="400" height="250">
-                </figure>
-                <span class="project-category">WEB DEVELOPMENT</span>
-                <h2>Personal Portfolio Site</h2>
-                <p>Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.</p>
-                <a href="projects.html" class="case-study-btn">Case Study &rarr;</a>
-              </article>
-            </div>
-            <div class="more-projects-wrap">
-              <a href="projects.html" class="more-projects-btn">More Project</a>
-            </div>
-          </section>
+                <article class="project-card portfolio-card">
+                    <figure>
+                        <img
+                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27800%27%20height%3D%27500%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23111827%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%233b82f6%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url(%23g)%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%23e5e7eb%27%20font-family%3D%27Arial%27%20font-size%3D%2730%27%3EProject%20Image%3C/text%3E%3C/svg%3E"
+                            alt="Project cover placeholder"
+                            width="400"
+                            height="250"
+                            loading="lazy"
+                        >
+                        <figcaption class="sr-only">Project cover image</figcaption>
+                    </figure>
+                    <span class="project-category">DATA SCIENCE</span>
+                    <h3>Dashboard / Analytics</h3>
+                    <p>Short description of what problem you solved, tools used, and outcome (metric if possible).</p>
+                    <a href="projects.html" class="case-study-btn">Case Study &rarr;</a>
+                </article>
 
-          <section class="quick-links" aria-labelledby="quick-links-heading">
-            <h2 id="quick-links-heading">Quick Links</h2>
+                <article class="project-card portfolio-card">
+                    <figure>
+                        <img
+                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27800%27%20height%3D%27500%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%271%27%20x2%3D%271%27%20y2%3D%270%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%230f172a%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%2322c55e%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url(%23g)%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%23e5e7eb%27%20font-family%3D%27Arial%27%20font-size%3D%2730%27%3EML%20Project%3C/text%3E%3C/svg%3E"
+                            alt="Machine learning project placeholder"
+                            width="400"
+                            height="250"
+                            loading="lazy"
+                        >
+                        <figcaption class="sr-only">Project cover image</figcaption>
+                    </figure>
+                    <span class="project-category">MACHINE LEARNING</span>
+                    <h3>Classification Model</h3>
+                    <p>What dataset, what approach, and how you evaluated it (accuracy/F1, cross-validation, etc.).</p>
+                    <a href="projects.html" class="case-study-btn">Case Study &rarr;</a>
+                </article>
+
+                <article class="project-card portfolio-card">
+                    <figure>
+                        <img
+                            src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27800%27%20height%3D%27500%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231f2937%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23f97316%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url(%23g)%27/%3E%3Ctext%20x%3D%2750%25%27%20y%3D%2750%25%27%20dominant-baseline%3D%27middle%27%20text-anchor%3D%27middle%27%20fill%3D%27%23e5e7eb%27%20font-family%3D%27Arial%27%20font-size%3D%2730%27%3EWeb%20App%3C/text%3E%3C/svg%3E"
+                            alt="Web development project placeholder"
+                            width="400"
+                            height="250"
+                            loading="lazy"
+                        >
+                        <figcaption class="sr-only">Project cover image</figcaption>
+                    </figure>
+                    <span class="project-category">WEB DEVELOPMENT</span>
+                    <h3>Portfolio Website</h3>
+                    <p>Explain what the site includes (pages, responsive layout, accessibility, deployment).</p>
+                    <a href="projects.html" class="case-study-btn">Case Study &rarr;</a>
+                </article>
+            </div>
+
+            <div class="more-projects-wrap">
+                <a href="projects.html" class="more-projects-btn">More Projects</a>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="experience" aria-labelledby="experience-heading">
+            <header class="section-header">
+                <h2 id="experience-heading">Experience</h2>
+                <p class="section-subtitle">Add internships, research, volunteering, or club roles.</p>
+            </header>
+
+            <div class="timeline" role="list">
+                <article class="timeline-item" role="listitem">
+                    <header class="timeline-header">
+                        <h3>Role Title — Organization</h3>
+                        <p class="timeline-meta"><time datetime="2025-01">Jan 2025</time> – <time datetime="2025-06">Jun 2025</time> • City, Country</p>
+                    </header>
+                    <ul class="timeline-bullets">
+                        <li>1 impact bullet (what you did + result).</li>
+                        <li>2nd bullet (tools used: Python, SQL, etc.).</li>
+                    </ul>
+                </article>
+
+                <article class="timeline-item" role="listitem">
+                    <header class="timeline-header">
+                        <h3>Role Title — Organization</h3>
+                        <p class="timeline-meta"><time datetime="2024-09">Sep 2024</time> – Present • City, Country</p>
+                    </header>
+                    <ul class="timeline-bullets">
+                        <li>1 impact bullet (what you built, improved, or learned).</li>
+                        <li>2nd bullet (mention collaboration/communication if relevant).</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="education" aria-labelledby="education-heading">
+            <header class="section-header">
+                <h2 id="education-heading">Education</h2>
+                <p class="section-subtitle">List your degree + any key coursework.</p>
+            </header>
+
+            <div class="education-grid">
+                <article class="edu-card">
+                    <h3>HCMIU — B.S. Data Science (edit)</h3>
+                    <p class="timeline-meta"><time datetime="2023">2023</time> – <time datetime="2027">2027</time> (expected)</p>
+                    <p><strong>Relevant coursework:</strong> Machine Learning, Data Structures, Probability & Statistics, Databases.</p>
+                </article>
+                <article class="edu-card">
+                    <h3>Certifications / Awards (optional)</h3>
+                    <ul class="link-list">
+                        <li>Certificate name — Provider (Year)</li>
+                        <li>Award name — Event (Year)</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- BLOG PREVIEW -->
+        <section class="blog-preview" aria-labelledby="blog-heading">
+            <header class="section-header">
+                <h2 id="blog-heading">Latest Posts</h2>
+                <p class="section-subtitle">Optional, but great for showing learning and communication.</p>
+            </header>
+
+            <div class="posts-grid">
+                <article class="post-card">
+                    <h3><a href="blog.html">Post Title 1 (edit)</a></h3>
+                    <p class="timeline-meta"><time datetime="2026-03-10">Mar 10, 2026</time> • 3–5 min read</p>
+                    <p>One-sentence summary of the post.</p>
+                </article>
+                <article class="post-card">
+                    <h3><a href="blog.html">Post Title 2 (edit)</a></h3>
+                    <p class="timeline-meta"><time datetime="2026-02-20">Feb 20, 2026</time> • 3–5 min read</p>
+                    <p>One-sentence summary of the post.</p>
+                </article>
+                <article class="post-card">
+                    <h3><a href="blog.html">Post Title 3 (edit)</a></h3>
+                    <p class="timeline-meta"><time datetime="2026-01-05">Jan 5, 2026</time> • 3–5 min read</p>
+                    <p>One-sentence summary of the post.</p>
+                </article>
+            </div>
+
+            <div class="section-actions">
+                <a href="blog.html" class="more-projects-btn">Read the blog</a>
+            </div>
+        </section>
+
+        <!-- CONTACT CTA -->
+        <section class="contact-cta" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Let’s build something together.</h2>
+            <p>Have an opportunity, project idea, or question? Send a message and I’ll reply soon.</p>
+            <div class="hero-actions" role="group" aria-label="Contact actions">
+                <a href="contact.html" class="cta-button">Go to Contact Form</a>
+                <a href="mailto:your.email@example.com" class="cta-button cta-secondary">Email (edit)</a>
+            </div>
+        </section>
+
+        <!-- QUICK LINKS (kept for assignment / navigation clarity) -->
+        <section class="quick-links" aria-labelledby="quick-links-heading">
+            <h2 id="quick-links-heading" data-i18n="home.quickLinksTitle">Quick Links</h2>
             <ul>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="projects.html">My Projects</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="contact.html">Get in Touch</a></li>
+                <li><a href="about.html" data-i18n="home.quickAbout">About Me</a></li>
+                <li><a href="projects.html" data-i18n="home.quickProjects">My Projects</a></li>
+                <li><a href="blog.html" data-i18n="home.quickBlog">Blog</a></li>
+                <li><a href="contact.html" data-i18n="home.quickContact">Get in Touch</a></li>
+                <li><a href="map.html">Map / Iframe</a></li>
+                <li><a href="policy.html" data-i18n="common.privacyPolicy">Privacy Policy</a></li>
             </ul>
-          </section>
+        </section>
     </main>
-    <footer>
-        <p class="footer-title">Quick Links</p>
+
+    <footer class="site-footer">
+        <p class="footer-title" data-i18n="common.quickLinks">Quick Links</p>
         <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-i18n="nav.about">About</a>
+            <a href="projects.html" data-i18n="nav.projects">Projects</a>
+            <a href="blog.html" data-i18n="nav.blog">Blog</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <a href="policy.html" data-i18n="common.privacyPolicy">Privacy Policy</a>
         </div>
         <hr class="footer-divider">
-        <p class="footer-copy">&copy; 2025 Duc Anh. All rights reserved. <a href="policy.html">Privacy Policy</a></p>
+        <p class="footer-copy">&copy; <span id="year">2026</span> Duc Anh. <span data-i18n="common.allRightsReserved">All rights reserved.</span></p>
     </footer>
+
+    <script>
+        (function () {
+            const yearEl = document.getElementById('year');
+            if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.getElementById('primary-nav');
+            if (!toggle || !nav) return;
+
+            toggle.addEventListener('click', () => {
+                const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!isOpen));
+                nav.classList.toggle('is-open', !isOpen);
+            });
+        })();
+    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
