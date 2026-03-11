@@ -11,3 +11,13 @@
   - I will fill in real API details in `docs/api.md` later.
   - I will replace placeholder values in `.env` with real secrets locally (without committing sensitive data).
   - I will use `checklist.md` to track and tick off assignment requirements as I complete them.
+
+### 2026-03-10 – README alignment with requirements
+- **Tool**: Cursor AI assistant
+- **What was done**:
+  - Reviewed `requirement.md` and updated `readme.md` to better match the assignment specification (site map, features mapped to rubric, how to run locally, deployment notes, credits section, and AI usage explanation).
+  - Documented how the project structure (pages, CSS, JS, i18n) fits the required checklist.
+- **How I will modify/use this**:
+  - I will keep the README updated when I add or remove pages, features, or deployment details.
+  - I will add concrete credits for any external images, icons, or resources I use.
+
