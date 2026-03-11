@@ -21,3 +21,13 @@
   - I will keep the README updated when I add or remove pages, features, or deployment details.
   - I will add concrete credits for any external images, icons, or resources I use.
 
+### 2026-03-10 – Light blue–violet theme tuning
+- **Tool**: Cursor AI assistant
+- **What was done**:
+  - Adjusted global color variables and the hero background in `css/style.css` to use a cohesive, lighter blue–violet palette.
+  - Ensured text and card backgrounds remain high-contrast and easy to read while matching the hero’s colors.
+- **How I will modify/use this**:
+  - I will keep using the CSS variables in `:root` when adding new components so the theme stays consistent.
+  - I will tweak specific section colors only through the variables if I need small visual changes later.
+
+

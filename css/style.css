@@ -7,17 +7,20 @@
    1. CSS Variables
    -------------------------------------------------------------------------- */
 :root {
-  --color-primary: #2563eb;
-  --color-accent: #7c3aed;
-  --color-accent-dark: #6d28d9;
-  --color-accent-light: #a78bfa;
-  --color-text: #1f2937;
+  /* Light, cohesive blue–violet theme */
+  --color-primary: #3b82f6;       /* bright blue */
+  --color-accent: #8b5cf6;        /* violet */
+  --color-accent-dark: #7c3aed;   /* deeper violet */
+  --color-accent-light: #c4b5fd;  /* pale violet */
+
+  --color-text: #111827;          /* dark slate */
   --color-text-muted: #6b7280;
   --color-text-light: #9ca3af;
-  --color-bg: #ffffff;
-  --color-bg-muted: #f9fafb;
-  --color-bg-soft: #fafafa;
-  --color-bg-border: #f3f4f6;
+
+  --color-bg: #f9fafb;            /* soft page background */
+  --color-bg-muted: #eef2ff;      /* very light indigo */
+  --color-bg-soft: #f5f3ff;       /* subtle violet tint */
+  --color-bg-border: #e5e7eb;
   --color-border: #e5e7eb;
   --color-footer: #e5e7eb;
   --font-size-base: 16px;
@@ -26,10 +29,12 @@
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-accent: 0 1px 3px rgba(124, 58, 237, 0.3);
-  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 6px 16px rgba(15, 23, 42, 0.12);
+  --shadow-accent: 0 1px 3px rgba(88, 28, 135, 0.3);
+
+  /* Lighter hero gradient that matches the rest of the theme */
+  --gradient-hero: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 40%, #f5f3ff 100%);
 }
 
 /* --------------------------------------------------------------------------
@@ -308,10 +313,10 @@ hr.footer-divider {
 .hero {
   padding: 4.5rem 1rem 3.5rem;
   background:
-    radial-gradient(1100px 400px at 15% 25%, rgba(124, 58, 237, 0.28), transparent 60%),
-    radial-gradient(900px 360px at 80% 15%, rgba(37, 99, 235, 0.25), transparent 55%),
-    linear-gradient(135deg, #0b1220, #101a2e 55%, #0b1220);
-  color: #fff;
+    radial-gradient(900px 360px at 10% 0%, rgba(59, 130, 246, 0.22), transparent 60%),
+    radial-gradient(800px 320px at 90% 0%, rgba(139, 92, 246, 0.24), transparent 60%),
+    var(--gradient-hero);
+  color: var(--color-text);
 }
 
 .hero-content {
@@ -324,7 +329,7 @@ hr.footer-divider {
 .hero-eyebrow {
   margin: 0 0 0.75rem;
   font-size: 0.95rem;
-  color: rgba(229, 231, 235, 0.9);
+  color: var(--color-text-muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -345,7 +350,7 @@ hr.footer-divider {
 .hero-subtitle {
   margin: 0 0 1.25rem;
   max-width: 65ch;
-  color: rgba(229, 231, 235, 0.9);
+  color: var(--color-text-muted);
   font-size: 1.05rem;
 }
 
@@ -391,15 +396,15 @@ hr.footer-divider {
 }
 
 .hero-highlights li {
-  border: 1px solid rgba(229, 231, 235, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.35);
   border-radius: var(--radius-lg);
   padding: 0.85rem 1rem;
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(229, 231, 235, 0.92);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-text);
 }
 
 .hero-highlights strong {
-  color: #fff;
+  color: var(--color-primary);
 }
 
 /* Shared section layout for home */
