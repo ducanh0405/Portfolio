@@ -29,5 +29,3 @@
 - **How I will modify/use this**:
   - I will keep using the CSS variables in `:root` when adding new components so the theme stays consistent.
   - I will tweak specific section colors only through the variables if I need small visual changes later.
-
-
