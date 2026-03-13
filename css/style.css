@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 /* ==========================================================================
    Duc Anh Portfolio - Refactored Styles
    Structure: Variables | Base | Layout | Components | Responsive
@@ -7,34 +9,35 @@
    1. CSS Variables
    -------------------------------------------------------------------------- */
 :root {
-  /* Light, cohesive blue–violet theme */
-  --color-primary: #3b82f6;       /* bright blue */
-  --color-accent: #8b5cf6;        /* violet */
-  --color-accent-dark: #7c3aed;   /* deeper violet */
-  --color-accent-light: #c4b5fd;  /* pale violet */
+  /* Clean, readable light theme */
+  --color-primary: #2563eb;       /* strong blue */
+  --color-accent: #4f46e5;        /* indigo */
+  --color-accent-dark: #3730a3;
+  --color-accent-light: #a5b4fc;
 
-  --color-text: #111827;          /* dark slate */
-  --color-text-muted: #6b7280;
-  --color-text-light: #9ca3af;
+  --color-text: #1e293b;          /* slate-800 */
+  --color-text-muted: #64748b;    /* slate-500 */
+  --color-text-light: #94a3b8;    /* slate-400 */
 
-  --color-bg: #f9fafb;            /* soft page background */
-  --color-bg-muted: #eef2ff;      /* very light indigo */
-  --color-bg-soft: #f5f3ff;       /* subtle violet tint */
-  --color-bg-border: #e5e7eb;
-  --color-border: #e5e7eb;
-  --color-footer: #e5e7eb;
+  --color-bg: #ffffff;            /* pure white */
+  --color-bg-muted: #f1f5f9;      /* slate-100 */
+  --color-bg-soft: #eef2ff;       /* indigo-50 */
+  --color-bg-border: #e2e8f0;     /* slate-200 */
+  --color-border: #e2e8f0;
+  --color-footer-bg: #1e293b;     /* slate-800 */
+  --color-footer-text: #cbd5e1;   /* slate-300 */
+
   --font-size-base: 16px;
   --font-size-sm: 0.9rem;
   --font-size-xs: 0.8rem;
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
-  --shadow-md: 0 6px 16px rgba(15, 23, 42, 0.12);
-  --shadow-accent: 0 1px 3px rgba(88, 28, 135, 0.3);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.07);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.09);
+  --shadow-accent: 0 1px 3px rgba(79, 70, 229, 0.25);
 
-  /* Lighter hero gradient that matches the rest of the theme */
-  --gradient-hero: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 40%, #f5f3ff 100%);
+  --gradient-hero: linear-gradient(135deg, #eff6ff 0%, #eef2ff 50%, #f5f3ff 100%);
 }
 
 /* --------------------------------------------------------------------------
@@ -52,7 +55,7 @@ html {
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: var(--font-size-base);
   color: var(--color-text);
   line-height: 1.6;
@@ -120,8 +123,10 @@ header:not(.site-header) {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--color-primary);
-  padding: 1rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.85rem 2rem;
+  box-shadow: var(--shadow-sm);
 }
 
 nav ul {
@@ -135,15 +140,17 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: var(--color-text);
   text-decoration: none;
   padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 nav a:hover,
 nav a:focus {
+  color: var(--color-primary);
   text-decoration: underline;
-  outline: 2px solid white;
 }
 
 /* New header/nav used by `index.html` */
@@ -239,8 +246,8 @@ nav a:focus {
 footer {
   margin-top: auto;
   padding: 3.5rem 2rem;
-  background: var(--color-text);
-  color: var(--color-footer);
+  background: var(--color-footer-bg);
+  color: var(--color-footer-text);
   text-align: center;
 }
 
@@ -264,7 +271,7 @@ footer {
 }
 
 .footer-links a {
-  color: var(--color-footer);
+  color: var(--color-footer-text);
   text-decoration: none;
   font-size: 1.05rem;
   padding: 0.5rem 0;
@@ -312,11 +319,9 @@ hr.footer-divider {
    -------------------------------------------------------------------------- */
 .hero {
   padding: 4.5rem 1rem 3.5rem;
-  background:
-    radial-gradient(900px 360px at 10% 0%, rgba(59, 130, 246, 0.22), transparent 60%),
-    radial-gradient(800px 320px at 90% 0%, rgba(139, 92, 246, 0.24), transparent 60%),
-    var(--gradient-hero);
+  background: var(--gradient-hero);
   color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .hero-content {
@@ -357,24 +362,31 @@ hr.footer-divider {
 .cta-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: white;
-  color: #0b1220;
+  background: var(--color-primary);
+  color: #ffffff;
   text-decoration: none;
   border-radius: var(--radius-md);
   font-weight: 700;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  transition: background 0.15s ease, transform 0.15s ease;
 }
 
 .cta-button:hover,
 .cta-button:focus {
+  background: #1d4ed8;
   transform: translateY(-1px);
 }
 
 .cta-secondary {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  border: 1px solid rgba(229, 231, 235, 0.35);
+  background: #ffffff;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
   box-shadow: none;
+}
+
+.cta-secondary:hover,
+.cta-secondary:focus {
+  background: var(--color-bg-soft);
 }
 
 .hero-actions {
@@ -554,19 +566,24 @@ hr.footer-divider {
    -------------------------------------------------------------------------- */
 .page-header {
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 3.5rem 2rem;
   background: var(--gradient-hero);
-  color: white;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .page-header h1 {
   margin: 0 0 0.5rem;
-  font-size: 2rem;
+  font-size: 2.25rem;
+  color: var(--color-text);
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .page-header p {
   margin: 0;
-  opacity: 0.95;
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-inline: auto;
 }
 
 .content-section {
@@ -904,7 +921,166 @@ hr.footer-divider {
 }
 
 .site-footer {
-  background: var(--color-text);
+  background: var(--color-footer-bg);
+}
+
+/* --------------------------------------------------------------------------
+   About Page Components
+   -------------------------------------------------------------------------- */
+.about-intro {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about-photo-wrap {
+  text-align: center;
+}
+
+.about-photo-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  box-shadow: var(--shadow-md);
+}
+
+.about-photo-initials {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.about-photo-caption {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.about-intro-text h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.about-cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.about-cta-links .more-projects-btn {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.about-skills-section,
+.about-education-section,
+.about-interests-section {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--color-border);
+  margin-top: 1.5rem;
+}
+
+.about-skills-section h2,
+.about-education-section h2,
+.about-interests-section h2 {
+  color: var(--color-text);
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.about-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.about-skill-block {
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+}
+
+.about-skill-block h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.about-edu-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-muted);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.about-edu-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  padding-top: 0.15rem;
+}
+
+.about-edu-card h3 {
+  margin: 0 0 0.25rem;
+}
+
+.about-interests-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.about-interests-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem;
+}
+
+.interest-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding-top: 0.1rem;
+}
+
+.about-interests-list strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+}
+
+.about-interests-list p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
 }
 
 /* --------------------------------------------------------------------------
@@ -1215,6 +1391,18 @@ hr.footer-divider {
   .about-grid,
   .skills-grid,
   .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-interests-list {
     grid-template-columns: 1fr;
   }
 

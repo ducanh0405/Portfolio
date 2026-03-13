@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Duc Anh - Data Science student, background and interests">
+    <meta name="description" content="About Duc Anh - Data Science student at HCMIU, Vietnam. Background, skills, and interests.">
     <title>About | Duc Anh</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,12 +11,6 @@
     <header>
         <nav aria-label="Main navigation">
             <ul id="nav-container"></ul>
-            <div class="lang-switch">
-                <select id="lang-select" data-i18n-aria-label="common.language">
-                    <option value="en">EN</option>
-                    <option value="vi">VI</option>
-                </select>
-            </div>
             <noscript>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -28,34 +22,161 @@
             </noscript>
         </nav>
     </header>
+
     <main>
+        <!-- PAGE HEADER -->
         <section class="page-header" aria-labelledby="about-heading">
-            <h1 id="about-heading" data-i18n="about.title">About Me</h1>
+            <h1 id="about-heading">About Me</h1>
+            <p>Data Science student passionate about AI, machine learning, and building things that matter.</p>
         </section>
-        <section class="content-section" aria-labelledby="background-heading">
-            <h2 id="background-heading" data-i18n="about.backgroundTitle">Background</h2>
-            <p data-i18n="about.backgroundText">I'm a sophomore Data Science student at HCMIU (Ho Chi Minh City International University), Vietnam. I'm passionate about turning data into insights and building intelligent systems.</p>
+
+        <!-- INTRO WITH PHOTO -->
+        <section class="about-intro content-section" aria-labelledby="intro-heading">
+            <div class="about-intro-grid">
+                <div class="about-photo-wrap">
+                    <div class="about-photo-placeholder" aria-label="Profile photo placeholder">
+                        <span class="about-photo-initials">DA</span>
+                    </div>
+                    <p class="about-photo-caption">Ho Chi Minh City, Vietnam</p>
+                </div>
+                <div class="about-intro-text">
+                    <h2 id="intro-heading">Hi, I'm Duc Anh</h2>
+                    <p>I'm a sophomore studying <strong>Data Science</strong> at <strong>Ho Chi Minh City International University (HCMIU)</strong>, Vietnam, with an expected graduation in 2027.</p>
+                    <p>I'm passionate about turning raw data into meaningful insights and building intelligent systems. Whether it's training a classification model, visualizing a complex dataset, or deploying a web app — I enjoy the full journey from idea to implementation.</p>
+                    <p>When I'm not studying, you'll find me exploring open-source projects, reading about the latest in AI research, or working on personal side projects.</p>
+                    <div class="about-cta-links">
+                        <a href="https://github.com/ducanh0405" class="more-projects-btn" rel="noopener" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/đức-anh-ngô-linked/" class="more-projects-btn" rel="noopener" target="_blank">LinkedIn</a>
+                        <a href="https://www.upwork.com/freelancers/~01354c12dca3193b0a?mp_source=share" class="more-projects-btn" rel="noopener" target="_blank">Upwork</a>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="content-section" aria-labelledby="interests-heading">
-            <h2 id="interests-heading" data-i18n="about.interestsTitle">Interests</h2>
-            <ul>
-                <li><strong data-i18n="about.interestAiTitle">AI & Machine Learning</strong> – <span data-i18n="about.interestAiText">Building and training models for real-world applications</span></li>
-                <li><strong data-i18n="about.interestGameTitle">Game Development</strong> – <span data-i18n="about.interestGameText">Creating interactive experiences and learning game engines</span></li>
-                <li><strong data-i18n="about.interestVizTitle">Data Visualization</strong> – <span data-i18n="about.interestVizText">Presenting data in clear, meaningful ways</span></li>
+
+        <!-- SKILLS -->
+        <section class="about-skills-section content-section" aria-labelledby="skills-about-heading">
+            <h2 id="skills-about-heading">Skills &amp; Tools</h2>
+            <div class="about-skills-grid">
+                <div class="about-skill-block">
+                    <h3>Languages</h3>
+                    <ul class="chip-list">
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="about-skill-block">
+                    <h3>ML / Data</h3>
+                    <ul class="chip-list">
+                        <li>scikit-learn</li>
+                        <li>PyTorch</li>
+                        <li>pandas</li>
+                        <li>NumPy</li>
+                        <li>Matplotlib</li>
+                    </ul>
+                </div>
+                <div class="about-skill-block">
+                    <h3>Tools</h3>
+                    <ul class="chip-list">
+                        <li>Git / GitHub</li>
+                        <li>Jupyter</li>
+                        <li>VS Code</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </div>
+                <div class="about-skill-block">
+                    <h3>Concepts</h3>
+                    <ul class="chip-list">
+                        <li>Machine Learning</li>
+                        <li>Statistics</li>
+                        <li>Data Visualization</li>
+                        <li>Feature Engineering</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="about-education-section content-section" aria-labelledby="edu-heading">
+            <h2 id="edu-heading">Education</h2>
+            <div class="about-edu-card">
+                <div class="about-edu-icon">🎓</div>
+                <div>
+                    <h3>B.S. Data Science — HCMIU</h3>
+                    <p class="timeline-meta">2023 – 2027 (expected)</p>
+                    <p><strong>Relevant coursework:</strong> Machine Learning, Data Structures &amp; Algorithms, Probability &amp; Statistics, Databases, Linear Algebra.</p>
+                </div>
+            </div>
+            <div class="about-edu-card">
+                <div class="about-edu-icon">📜</div>
+                <div>
+                    <h3>Certifications</h3>
+                    <ul class="link-list">
+                        <li>Machine Learning — Coursera / Andrew Ng (2024)</li>
+                        <li>Python for Data Science — DataCamp (2023)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERESTS -->
+        <section class="about-interests-section content-section" aria-labelledby="interests-heading">
+            <h2 id="interests-heading">What I Enjoy</h2>
+            <ul class="about-interests-list">
+                <li>
+                    <span class="interest-icon">🤖</span>
+                    <div>
+                        <strong>AI &amp; Machine Learning</strong>
+                        <p>Building and evaluating models for real-world classification, prediction, and NLP tasks.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="interest-icon">📊</span>
+                    <div>
+                        <strong>Data Visualization</strong>
+                        <p>Turning complex datasets into clear, compelling charts that tell a story.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="interest-icon">🌐</span>
+                    <div>
+                        <strong>Web Development</strong>
+                        <p>Building accessible, responsive web projects — from personal tools to portfolio sites.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="interest-icon">🎮</span>
+                    <div>
+                        <strong>Game Development</strong>
+                        <p>Experimenting with game engines and interactive experiences as a creative outlet.</p>
+                    </div>
+                </li>
             </ul>
         </section>
+
+        <!-- CTA -->
+        <section class="contact-cta content-section" aria-labelledby="cta-heading">
+            <h2 id="cta-heading">Let's connect</h2>
+            <p>I'm open to internships, research collaborations, and interesting projects. Feel free to reach out.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="cta-button" style="background:var(--color-primary);color:#fff;">Get in Touch</a>
+                <a href="projects.html" class="more-projects-btn">View Projects</a>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p class="footer-title" data-i18n="common.quickLinks">Quick Links</p>
+        <p class="footer-title">Quick Links</p>
         <div class="footer-links">
-            <a href="index.html" data-i18n="nav.home">Home</a>
-            <a href="about.html" data-i18n="nav.about">About</a>
-            <a href="projects.html" data-i18n="nav.projects">Projects</a>
-            <a href="blog.html" data-i18n="nav.blog">Blog</a>
-            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </div>
         <hr class="footer-divider">
-        <p class="footer-copy">&copy; 2025 Duc Anh. <span data-i18n="common.allRightsReserved">All rights reserved.</span> <a href="policy.html" data-i18n="common.privacyPolicy">Privacy Policy</a></p>
+        <p class="footer-copy">&copy; 2026 Duc Anh. <span>All rights reserved.</span> <a href="policy.html">Privacy Policy</a></p>
     </footer>
     <script src="js/main.js"></script>
 </body>
