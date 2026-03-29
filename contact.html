@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Duc Anh - Get in touch">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
 </head>
 <body>
-    <header>
-        <nav aria-label="Main navigation">
-            <ul id="nav-container"></ul>
-
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Go to homepage">
+                <span class="brand-mark" aria-hidden="true">DA</span>
+                <span class="brand-text">Duc Anh</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+            <ul id="primary-nav" class="nav-links"></ul>
             <noscript>
-                <ul>
+                <ul class="nav-links is-open">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    <li><a href="map.html">Map</a></li>
                 </ul>
             </noscript>
         </nav>
@@ -28,7 +36,7 @@
             <div class="contact-layout">
             <div class="contact-info">
                 <h2 data-i18n="contact.title">Let's discuss your Project</h2>
-                <p class="contact-intro" data-i18n="contact.intro">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                <p class="contact-intro" data-i18n="contact.intro">I usually reply within 24 hours. Share your goal, timeline, and expected outcome so I can support you better.</p>
                 <div class="contact-blocks">
                     <div class="contact-block">
                         <span class="contact-icon" aria-hidden="true">📍</span>
@@ -53,15 +61,15 @@
                     </div>
                 </div>
                 <div class="contact-social">
-                    <a href="#" aria-label="Facebook">f</a>
-                    <a href="#" aria-label="Dribbble">○</a>
-                    <a href="#" aria-label="Instagram">○</a>
-                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="https://github.com/ducanh0405" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+                    <a href="https://www.linkedin.com/in/đức-anh-ngô-linked/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+                    <a href="https://www.upwork.com/freelancers/~01354c12dca3193b0a?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork">Up</a>
+                    <a href="mailto:anduc0405vsg@gmail.com" aria-label="Email">@</a>
                 </div>
             </div>
             <div class="contact-form-wrap">
             <form class="contact-form" id="contact-form" action="#" method="post">
-                <p class="contact-intro" data-i18n="contact.intro">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                <p class="contact-intro" data-i18n="contact.intro">I usually reply within 24 hours. Share your goal, timeline, and expected outcome so I can support you better.</p>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name"><span data-i18n="contact.nameLabel">Name</span> <span class="required">*</span></label>
@@ -109,6 +117,7 @@
             <a href="projects.html" data-i18n="nav.projects">Projects</a>
             <a href="blog.html" data-i18n="nav.blog">Blog</a>
             <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <a href="map.html">Map</a>
         </div>
         <hr class="footer-divider">
         <p class="footer-copy">&copy; 2026 Duc Anh. <span data-i18n="common.allRightsReserved">All rights reserved.</span> <a href="policy.html" data-i18n="common.privacyPolicy">Privacy Policy</a></p>

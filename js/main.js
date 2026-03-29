@@ -1,17 +1,18 @@
 /**
  * Main app - Nav, Contact form helpers
- * Single source of truth for nav links
+ * Language: English only
  */
 const NAV_LINKS = [
-  { href: 'index.html', labelKey: 'nav.home' },
-  { href: 'about.html', labelKey: 'nav.about' },
-  { href: 'projects.html', labelKey: 'nav.projects' },
-  { href: 'blog.html', labelKey: 'nav.blog' },
-  { href: 'contact.html', labelKey: 'nav.contact' }
+  { href: 'index.html', label: 'Home' },
+  { href: 'about.html', label: 'About' },
+  { href: 'projects.html', label: 'Projects' },
+  { href: 'blog.html', label: 'Blog' },
+  { href: 'contact.html', label: 'Contact' },
+  { href: 'map.html', label: 'Map' }
 ];
 
 const CONTACT_INFO = {
-  address: 'Nguyen Huu Canh Street , Binh Thanh District, Ho Chi Minh City, Vietnam',
+  address: 'Nguyen Huu Canh Street, Binh Thanh District, Ho Chi Minh City, Vietnam',
   email: 'anduc0405vsg@gmail.com',
   phone: '+84 902 614 506'
 };
@@ -25,67 +26,76 @@ function get(obj, path) {
   return path.split('.').reduce((acc, k) => (acc && acc[k] != null ? acc[k] : undefined), obj);
 }
 
-function format(template, vars) {
-  if (!template || !vars) return template;
-  return template.replace(/\{\{\s*([\w.]+)\s*\}\}/g, (_, key) => {
-    const val = get(vars, key);
-    return val == null ? '' : String(val);
-  });
-}
-
-function t(key, vars) {
+function t(key) {
   const raw = get(I18N.dict, key);
-  if (typeof raw === 'string') return format(raw, vars);
-  return key;
+  return typeof raw === 'string' ? raw : key;
 }
 
-function getPreferredLang() {
-  const saved = localStorage.getItem('lang');
-  if (saved === 'en' || saved === 'vi') return saved;
-  const nav = (navigator.language || '').toLowerCase();
-  return nav.startsWith('vi') ? 'vi' : 'en';
-}
-
-async function loadI18n(lang) {
-  I18N.lang = lang;
+async function loadI18n() {
   try {
-    const res = await fetch(`i18n/${lang}.json`, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`Failed to load i18n/${lang}.json`);
+    const res = await fetch('i18n/en.json', { cache: 'force-cache' });
+    if (!res.ok) throw new Error('Failed to load i18n/en.json');
     I18N.dict = await res.json();
   } catch (e) {
     I18N.dict = {};
     console.error(e);
   }
-  document.documentElement.lang = lang;
+  document.documentElement.lang = 'en';
 }
 
 function applyTranslations(root = document) {
   root.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    el.textContent = t(key);
+    const val = t(key);
+    if (val !== key) el.textContent = val;
   });
   root.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.getAttribute('data-i18n-html');
-    el.innerHTML = t(key);
+    const val = t(key);
+    if (val !== key) el.innerHTML = val;
   });
   root.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    el.setAttribute('placeholder', t(key));
+    const val = t(key);
+    if (val !== key) el.setAttribute('placeholder', val);
   });
   root.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
     const key = el.getAttribute('data-i18n-aria-label');
-    el.setAttribute('aria-label', t(key));
+    const val = t(key);
+    if (val !== key) el.setAttribute('aria-label', val);
   });
   root.querySelectorAll('[data-i18n-value]').forEach(el => {
     const key = el.getAttribute('data-i18n-value');
-    el.setAttribute('value', t(key));
+    const val = t(key);
+    if (val !== key) el.setAttribute('value', val);
   });
 }
 
 function renderNav() {
   const el = document.getElementById('nav-container') || document.getElementById('primary-nav');
   if (!el) return;
-  el.innerHTML = NAV_LINKS.map(l => `<li><a href="${l.href}">${t(l.labelKey)}</a></li>`).join('');
+  const currentPage = location.pathname.split('/').pop() || 'index.html';
+  el.innerHTML = NAV_LINKS.map(l =>
+    `<li><a href="${l.href}"${currentPage === l.href ? ' aria-current="page"' : ''}>${l.label}</a></li>`
+  ).join('');
+}
+
+function initMobileNav() {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('primary-nav');
+  if (!toggle || !nav) return;
+
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    nav.classList.toggle('is-open', !isOpen);
+  });
+}
+
+function updateCurrentYear() {
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 }
 
 function initContactPage() {
@@ -97,23 +107,11 @@ function initContactPage() {
   if (phone) phone.textContent = CONTACT_INFO.phone;
 }
 
-function initLangSwitcher() {
-  const select = document.getElementById('lang-select');
-  if (!select) return;
-  select.value = I18N.lang;
-  select.addEventListener('change', async () => {
-    const next = select.value === 'vi' ? 'vi' : 'en';
-    localStorage.setItem('lang', next);
-    await loadI18n(next);
-    renderNav();
-    applyTranslations();
-  });
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadI18n(getPreferredLang());
+  await loadI18n();
   renderNav();
-  initLangSwitcher();
+  initMobileNav();
   applyTranslations();
   initContactPage();
+  updateCurrentYear();
 });

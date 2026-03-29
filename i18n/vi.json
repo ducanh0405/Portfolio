@@ -49,7 +49,7 @@
   },
   "projects": {
     "title": "Portfolio",
-    "subtitle": "Có rất nhiều biến thể của Lorem Ipsum, nhưng đa số đã bị chỉnh sửa theo một cách nào đó.",
+    "subtitle": "Một số dự án tiêu biểu về khoa học dữ liệu, machine learning và phát triển web.",
     "backToHome": "Quay về trang chủ"
   },
   "blog": {
@@ -67,7 +67,7 @@
   },
   "contact": {
     "title": "Hãy trao đổi về dự án của bạn",
-    "intro": "Có rất nhiều biến thể của Lorem Ipsum, nhưng đa số đã bị chỉnh sửa theo một cách nào đó.",
+    "intro": "Tôi thường phản hồi trong vòng 24 giờ. Hãy chia sẻ mục tiêu, thời gian và kết quả mong muốn để tôi hỗ trợ tốt hơn.",
     "addressLabel": "Địa chỉ",
     "emailLabel": "Email",
     "phoneLabel": "Điện thoại",

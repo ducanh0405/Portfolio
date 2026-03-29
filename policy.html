@@ -6,19 +6,27 @@
     <meta name="description" content="Privacy Policy and Terms of Use for Duc Anh's personal website">
     <title>Privacy Policy | Duc Anh</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
 </head>
 <body>
-    <header>
-        <nav aria-label="Main navigation">
-            <ul id="nav-container"></ul>
-
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Go to homepage">
+                <span class="brand-mark" aria-hidden="true">DA</span>
+                <span class="brand-text">Duc Anh</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+            <ul id="primary-nav" class="nav-links"></ul>
             <noscript>
-                <ul>
+                <ul class="nav-links is-open">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="map.html">Map</a></li>
                 </ul>
             </noscript>
         </nav>
@@ -57,6 +65,7 @@
             <a href="projects.html" data-i18n="nav.projects">Projects</a>
             <a href="blog.html" data-i18n="nav.blog">Blog</a>
             <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <a href="map.html">Map</a>
         </div>
         <hr class="footer-divider">
         <p class="footer-copy">&copy; 2026 Duc Anh. <span data-i18n="common.allRightsReserved">All rights reserved.</span> <a href="policy.html" data-i18n="common.privacyPolicy">Privacy Policy</a></p>

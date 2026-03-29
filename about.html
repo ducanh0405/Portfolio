@@ -6,18 +6,27 @@
     <meta name="description" content="About Duc Anh - Data Science student at HCMIU, Vietnam. Background, skills, and interests.">
     <title>About | Duc Anh</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
 </head>
 <body>
-    <header>
-        <nav aria-label="Main navigation">
-            <ul id="nav-container"></ul>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Go to homepage">
+                <span class="brand-mark" aria-hidden="true">DA</span>
+                <span class="brand-text">Duc Anh</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+            <ul id="primary-nav" class="nav-links"></ul>
             <noscript>
-                <ul>
+                <ul class="nav-links is-open">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="map.html">Map</a></li>
                 </ul>
             </noscript>
         </nav>
@@ -104,7 +113,7 @@
                 <div class="about-edu-icon">🎓</div>
                 <div>
                     <h3>B.S. Data Science — HCMIU</h3>
-                    <p class="timeline-meta">2023 – 2027 (expected)</p>
+                    <p class="timeline-meta">2024 – 2028 (expected)</p>
                     <p><strong>Relevant coursework:</strong> Machine Learning, Data Structures &amp; Algorithms, Probability &amp; Statistics, Databases, Linear Algebra.</p>
                 </div>
             </div>
@@ -174,6 +183,7 @@
             <a href="projects.html">Projects</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
+            <a href="map.html">Map</a>
         </div>
         <hr class="footer-divider">
         <p class="footer-copy">&copy; 2026 Duc Anh. <span>All rights reserved.</span> <a href="policy.html">Privacy Policy</a></p>

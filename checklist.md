@@ -5,18 +5,18 @@ Use this as a simple TODO list for your assignment and portfolio.
 ### Structure & Pages
 - [x] Confirm you have **5–10 HTML pages** (`index`, `about`, `projects`, `blog`, post page, `contact`, `map`, `policy`, etc.).
 - [x] Make sure the **navigation bar is consistent** across all pages.
-- [ ] Verify all **internal links** work (menu, buttons, “More projects”, blog links, etc.).
+- [x] Verify all **internal links** work (menu, buttons, “More projects”, blog links, etc.).
 
 ### Content
-- [ ] Replace **placeholder text** on the home page (hero, about, skills, experience, education, blog preview, contact CTA).
-- [ ] Update **project cards** with real projects (title, short description, tech stack, link to details).
+- [x] Replace **placeholder text** on the home page (hero, about, skills, experience, education, blog preview, contact CTA).
+- [x] Update **project cards** with real projects (title, short description, tech stack, link to details).
 - [x] Fill in **blog content** (at least one real post).
-- [ ] Update **contact information** (email, phone, address) everywhere it appears.
+- [x] Update **contact information** (email, phone, address) everywhere it appears.
 
 ### Media & Iframe
 - [x] Add at least **5 images** with meaningful `alt` text.
 - [x] Add/verify at least **one `<figure>` + `<figcaption>`**.
-- [ ] Ensure there is at least **one `<iframe>`** (e.g. Google Maps / YouTube) on the `map.html` or relevant page.
+- [x] Ensure there is at least **one `<iframe>`** (e.g. Google Maps / YouTube) on the `map.html` or relevant page.
 
 ### Form Requirements
 - [ ] On the contact (or another) page, include a **full-featured form** with:

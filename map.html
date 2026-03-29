@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Map and media page for Duc Anh portfolio - location and presentation video.">
+    <title>Map & Media | Duc Anh</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Go to homepage">
+                <span class="brand-mark" aria-hidden="true">DA</span>
+                <span class="brand-text">Duc Anh</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+            <ul id="primary-nav" class="nav-links"></ul>
+            <noscript>
+                <ul class="nav-links is-open">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="map.html" aria-current="page">Map</a></li>
+                </ul>
+            </noscript>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header" aria-labelledby="map-heading">
+            <h1 id="map-heading">Map & Media</h1>
+            <p>Location and media section for portfolio presentation.</p>
+        </section>
+
+        <section class="content-section" aria-labelledby="location-heading">
+            <h2 id="location-heading">My Study Location</h2>
+            <p>Ho Chi Minh City International University (HCMIU), Binh Thanh District, Ho Chi Minh City.</p>
+            <div style="border:1px solid var(--color-border); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm);">
+                <iframe
+                    title="HCMIU map location"
+                    src="https://www.google.com/maps?q=Ho%20Chi%20Minh%20City%20International%20University&output=embed"
+                    width="100%"
+                    height="380"
+                    style="border:0;"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="media-heading">
+            <h2 id="media-heading">Reference Video</h2>
+            <p>A sample embedded video section to satisfy iframe/media requirements.</p>
+            <div style="position:relative; width:100%; padding-top:56.25%; border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm);">
+                <iframe
+                    title="Data science introduction video"
+                    src="https://www.youtube.com/embed/ua-CiDNNj30"
+                    style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-title" data-i18n="common.quickLinks">Quick Links</p>
+        <div class="footer-links">
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-i18n="nav.about">About</a>
+            <a href="projects.html" data-i18n="nav.projects">Projects</a>
+            <a href="blog.html" data-i18n="nav.blog">Blog</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <a href="map.html" aria-current="page">Map</a>
+        </div>
+        <hr class="footer-divider">
+        <p class="footer-copy">&copy; 2026 Duc Anh. <span data-i18n="common.allRightsReserved">All rights reserved.</span> <a href="policy.html" data-i18n="common.privacyPolicy">Privacy Policy</a></p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

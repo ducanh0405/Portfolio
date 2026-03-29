@@ -24,7 +24,7 @@ All HTML files are in the project root:
 - `about.html` – **About**
   - Background, interests, short bio
 - `projects.html` – **Portfolio / Projects**
-  - Project cards with title, description, category and “Case Study” links
+  - AI collaborative workspace demo with command center, thinking trace, and interactive widgets
 - `blog.html` – **Blog list**
   - List of blog posts with date and excerpt
 - `post-1.html` – **Sample blog post**
@@ -34,11 +34,13 @@ All HTML files are in the project root:
   - Includes multiple input types and grouping for the assignment’s “full form” requirement
 - `policy.html` – **Privacy & Terms**
   - Simple privacy policy and terms text
+- `map.html` – **Map & Media**
+  - Embedded Google Maps location + YouTube iframe section
 
 Supporting files:
 
 - `css/style.css` – Global styles for all pages (layout, typography, responsive, components)
-- `js/main.js` – Small JS helpers (navigation rendering, contact info injection, language switcher)
+- `js/main.js` – Small JS helpers (navigation rendering + contact info injection)
 - `i18n/en.json`, `i18n/vi.json` – Basic EN / VI translation dictionaries
 - `checklist.md` – Assignment-oriented checklist (requirements from `requirement.md`)
 - `docs/AI_usage_logs.md` – AI usage log (for assignment)
@@ -54,12 +56,12 @@ Supporting files:
   - Clear internal links between Home, About, Projects, Blog, Contact, Policy
 - **Media & content**
   - Multiple images with `alt` text (portfolio cards / blog visuals)
-  - Room for at least one `figure` / `figcaption` and iframe (e.g. on a future `map.html` if added)
+  - Includes `figure` / `figcaption` and iframe content via `map.html`
 - **Responsive layout**
   - Home hero + sections adapt for mobile (≤768px)
   - Projects and blog lists use CSS Grid (1 column on small screens)
 - **Portfolio**
-  - Projects overview on `projects.html`
+  - AI-first workspace prototype on `projects.html`
   - Featured projects on Home linking back to the main projects page
 - **Blog**
   - Blog listing page + one detailed post page

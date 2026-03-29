@@ -49,7 +49,7 @@
   },
   "projects": {
     "title": "Portfolio",
-    "subtitle": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    "subtitle": "Selected projects in data science, machine learning, and web development.",
     "backToHome": "Back to Home"
   },
   "blog": {
@@ -67,7 +67,7 @@
   },
   "contact": {
     "title": "Let's discuss your Project",
-    "intro": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    "intro": "I usually reply within 24 hours. Share your goal, timeline, and expected outcome so I can support you better.",
     "addressLabel": "Address",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
