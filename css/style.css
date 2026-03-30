@@ -60,6 +60,7 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   margin: 0;
+  padding-top: 3.75rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -155,8 +156,10 @@ nav a:focus {
 
 /* New header/nav used by `index.html` */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
