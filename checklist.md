@@ -19,13 +19,13 @@ Use this as a simple TODO list for your assignment and portfolio.
 - [x] Ensure there is at least **one `<iframe>`** (e.g. Google Maps / YouTube) on the `map.html` or relevant page.
 
 ### Form Requirements
-- [ ] On the contact (or another) page, include a **full-featured form** with:
-  - [ ] `text`, `email`, `tel`, `password`, `number`, `date`, `range`, `color`, `file`
-  - [ ] `radio`, `checkbox`, `select` (with `optgroup`), `textarea`, `datalist`, `hidden`
-  - [ ] `submit` and `reset` buttons
-- [ ] Use **`label` for all inputs**, and group with at least one `fieldset` + `legend`.
-- [ ] Add **`required`/`pattern`/`min`/`max`/`step`** where appropriate.
-- [ ] Show **friendly error messages** (native HTML messages are ok, JS enhancement optional).
+- [x] On the contact (or another) page, include a **full-featured form** with:
+  - [x] `text`, `email`, `tel`, `password`, `number`, `date`, `range`, `color`, `file`
+  - [x] `radio`, `checkbox`, `select` (with `optgroup`), `textarea`, `datalist`, `hidden`
+  - [x] `submit` and `reset` buttons
+- [x] Use **`label` for all inputs**, and group with at least one `fieldset` + `legend`.
+- [x] Add **`required`/`pattern`/`min`/`max`/`step`** where appropriate.
+- [x] Show **friendly error messages** (native HTML messages are ok, JS enhancement optional).
 
 ### CSS & Responsive Design
 - [x] Keep styles in the **external CSS file** (`css/style.css`).

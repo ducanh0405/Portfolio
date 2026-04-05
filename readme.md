@@ -24,7 +24,7 @@ All HTML files are in the project root:
 - `about.html` – **About**
   - Background, interests, short bio
 - `projects.html` – **Portfolio / Projects**
-  - AI collaborative workspace demo with command center, thinking trace, and interactive widgets
+  - Project cards with categories, summaries, and case-study links
 - `blog.html` – **Blog list**
   - List of blog posts with date and excerpt
 - `post-1.html` – **Sample blog post**
@@ -41,7 +41,6 @@ Supporting files:
 
 - `css/style.css` – Global styles for all pages (layout, typography, responsive, components)
 - `js/main.js` – Small JS helpers (navigation rendering + contact info injection)
-- `i18n/en.json`, `i18n/vi.json` – Basic EN / VI translation dictionaries
 - `checklist.md` – Assignment-oriented checklist (requirements from `requirement.md`)
 - `docs/AI_usage_logs.md` – AI usage log (for assignment)
 - `docs/api.md` – Empty API documentation draft
@@ -61,13 +60,13 @@ Supporting files:
   - Home hero + sections adapt for mobile (≤768px)
   - Projects and blog lists use CSS Grid (1 column on small screens)
 - **Portfolio**
-  - AI-first workspace prototype on `projects.html`
+  - Main project listing page on `projects.html`
   - Featured projects on Home linking back to the main projects page
 - **Blog**
   - Blog listing page + one detailed post page
 - **Contact form**
-  - Full contact page with a structured form (name, email, subject, message, etc.)
-  - Labels and grouping prepared to meet “full-featured form” requirements
+  - Full contact page with all required input types for assignment
+  - Uses `fieldset`/`legend`, `required`/`pattern`/`min`/`max`/`step`, and friendly validation messages
 - **Accessibility basics**
   - Landmarks (`header`, `nav`, `main`, `footer`)
   - Keyboard-focusable navigation and buttons with visible hover/focus styles
