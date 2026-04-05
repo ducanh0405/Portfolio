@@ -69,127 +69,40 @@
             </div>
             <div class="contact-form-wrap">
             <form class="contact-form" id="contact-form" action="#" method="post">
-                <p class="contact-intro" data-i18n="contact.intro">I usually reply within 24 hours. Share your goal, timeline, and expected outcome so I can support you better.</p>
-                <input type="hidden" name="source_page" value="contact-page">
-
-                <fieldset class="form-extra">
-                    <legend>Basic Information</legend>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name"><span data-i18n="contact.nameLabel">Name</span> <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required minlength="2" maxlength="50" pattern="[A-Za-z\s]{2,50}" title="Please enter 2-50 letters only." placeholder=" ">
-                        </div>
-                        <div class="form-group">
-                            <label for="email"><span data-i18n="contact.emailLabel">Email</span> <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required title="Please enter a valid email address." placeholder=" ">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone"><span data-i18n="contact.phoneLabel">Phone</span> <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" required pattern="[\+]?[0-9\s-]{9,15}" title="Enter a valid phone number (9-15 digits)." placeholder=" ">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Project Passcode <span class="required">*</span></label>
-                            <input type="password" id="password" name="password" required minlength="8" pattern=".{8,}" title="Minimum 8 characters." placeholder=" ">
-                        </div>
-                    </div>
-                </fieldset>
-
-                <fieldset class="form-extra">
-                    <legend>Project Details</legend>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="location" data-i18n="contact.locationLabel">Location</label>
-                            <input type="text" id="location" name="location" placeholder=" ">
-                        </div>
-                        <div class="form-group">
-                            <label for="start-date">Preferred Start Date <span class="required">*</span></label>
-                            <input type="date" id="start-date" name="start_date" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="budget"><span data-i18n="contact.budgetLabel">Budget (USD)</span> <span class="required">*</span></label>
-                            <input type="number" id="budget" name="budget" min="100" max="50000" step="100" required title="Budget should be between 100 and 50000." placeholder=" ">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject"><span data-i18n="contact.subjectLabel">Subject</span> <span class="required">*</span></label>
-                            <input type="text" id="subject" name="subject" list="subject-list" required placeholder=" ">
-                            <datalist id="subject-list">
-                                <option value="Project Inquiry" data-i18n-value="contact.subjectProjectInquiry"></option>
-                                <option value="Collaboration" data-i18n-value="contact.subjectCollaboration"></option>
-                                <option value="Hiring" data-i18n-value="contact.subjectHiring"></option>
-                            </datalist>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="service-type">Service Type <span class="required">*</span></label>
-                            <select id="service-type" name="service_type" required>
-                                <option value="">Choose one...</option>
-                                <optgroup label="Data Services">
-                                    <option value="eda">Exploratory Data Analysis</option>
-                                    <option value="dashboard">Dashboard Development</option>
-                                    <option value="ml">Machine Learning Model</option>
-                                </optgroup>
-                                <optgroup label="Development Services">
-                                    <option value="web">Web Development</option>
-                                    <option value="uiux">UI/UX Design</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="brand-color">Preferred Brand Color</label>
-                            <input type="color" id="brand-color" name="brand_color" value="#2563eb">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="urgency">Urgency (1-10)</label>
-                            <input type="range" id="urgency" name="urgency" min="1" max="10" step="1" value="5">
-                            <output id="urgency-output" for="urgency">5</output>
-                        </div>
-                        <div class="form-group">
-                            <label for="attachment">Attach Brief / File</label>
-                            <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
-                        </div>
-                    </div>
-                </fieldset>
-
-                <fieldset class="form-extra">
-                    <legend>Preferences</legend>
+                <p class="contact-intro">I usually reply within 24 hours. Share your goal, timeline, and expected outcome so I can support you better.</p>
+                <div class="form-row">
                     <div class="form-group">
-                        <span>Preferred Contact Method <span class="required">*</span></span>
-                        <div class="form-inline">
-                            <label for="contact-email"><input type="radio" id="contact-email" name="contact_method" value="email" required> Email</label>
-                            <label for="contact-phone"><input type="radio" id="contact-phone" name="contact_method" value="phone"> Phone</label>
-                            <label for="contact-chat"><input type="radio" id="contact-chat" name="contact_method" value="chat"> Chat</label>
-                        </div>
+                        <label for="name"><span>Name</span> <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required minlength="2" placeholder=" ">
                     </div>
-
                     <div class="form-group">
-                        <span>Project Focus (select one or more)</span>
-                        <div class="form-inline">
-                            <label for="focus-analytics"><input type="checkbox" id="focus-analytics" name="focus[]" value="analytics"> Analytics</label>
-                            <label for="focus-ml"><input type="checkbox" id="focus-ml" name="focus[]" value="ml"> Machine Learning</label>
-                            <label for="focus-web"><input type="checkbox" id="focus-web" name="focus[]" value="web"> Web App</label>
-                        </div>
+                        <label for="email"><span>Email</span> <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder=" ">
                     </div>
-                </fieldset>
-
-                <div class="form-group">
-                    <label for="message"><span data-i18n="contact.messageLabel">Message</span> <span class="required">*</span></label>
-                    <textarea id="message" name="message" rows="4" required minlength="20" title="Please write at least 20 characters." placeholder=" "></textarea>
                 </div>
-
+                <div class="form-row single">
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" placeholder=" ">
+                    </div>
+                </div>
+                <div class="form-row single">
+                    <div class="form-group">
+                        <label for="subject"><span>Subject</span> <span class="required">*</span></label>
+                        <input type="text" id="subject" name="subject" list="subject-list" required placeholder=" ">
+                        <datalist id="subject-list">
+                            <option value="Project Inquiry"></option>
+                            <option value="Collaboration"></option>
+                            <option value="Hiring"></option>
+                        </datalist>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message"><span>Message</span> <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn-submit"><span data-i18n="contact.submit">Submit</span> <span class="btn-arrow">▶</span></button>
-                    <button type="reset">Reset</button>
+                    <button type="submit" class="btn-submit"><span>Submit</span> <span class="btn-arrow">▶</span></button>
                 </div>
             </form>
             </div>
@@ -209,34 +122,6 @@
         <hr class="footer-divider">
         <p class="footer-copy">&copy; 2026 Duc Anh. All rights reserved. <a href="policy.html">Privacy Policy</a></p>
     </footer>
-    <script>
-        (function () {
-            const urgency = document.getElementById('urgency');
-            const urgencyOut = document.getElementById('urgency-output');
-            if (urgency && urgencyOut) {
-                const update = () => { urgencyOut.value = urgency.value; };
-                update();
-                urgency.addEventListener('input', update);
-            }
-
-            const form = document.getElementById('contact-form');
-            if (form) {
-                const fields = form.querySelectorAll('input, select, textarea');
-                fields.forEach((field) => {
-                    field.addEventListener('invalid', () => {
-                        if (field.validity.valueMissing) {
-                            field.setCustomValidity('Please fill out this field before submitting.');
-                        } else if (field.validity.patternMismatch) {
-                            field.setCustomValidity(field.title || 'Please match the requested format.');
-                        } else {
-                            field.setCustomValidity('Please enter a valid value.');
-                        }
-                    });
-                    field.addEventListener('input', () => field.setCustomValidity(''));
-                });
-            }
-        })();
-    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
