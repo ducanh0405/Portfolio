@@ -31,7 +31,7 @@ All HTML files are in the project root:
   - Example article (e.g. “Getting Started with Machine Learning”)
 - `contact.html` – **Contact (full form)**
   - Styled two‑column contact section + form
-  - Includes multiple input types and grouping for the assignment’s “full form” requirement
+  - Includes all required input types (`text/email/tel/password/number/date/range/color/file/radio/checkbox/select/textarea/datalist/hidden`) plus submit/reset, validation constraints, and friendly error messages
 - `policy.html` – **Privacy & Terms**
   - Simple privacy policy and terms text
 - `map.html` – **Map & Media**
@@ -66,8 +66,8 @@ Supporting files:
 - **Blog**
   - Blog listing page + one detailed post page
 - **Contact form**
-  - Full contact page with a structured form (name, email, subject, message, etc.)
-  - Labels and grouping prepared to meet “full-featured form” requirements
+  - Full contact page with assignment-compliant form controls and validation
+  - Uses `fieldset`/`legend`, labels, `required`/`pattern`/`min`/`max`/`step`, and custom friendly validation messages
 - **Accessibility basics**
   - Landmarks (`header`, `nav`, `main`, `footer`)
   - Keyboard-focusable navigation and buttons with visible hover/focus styles
